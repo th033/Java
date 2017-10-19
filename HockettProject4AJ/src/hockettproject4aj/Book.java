@@ -29,7 +29,11 @@ public class Book extends StoreItem
         super(title, author, dateAcquired, askingPrice, purchasePrice);
         this.genre=genre;
         bookCount+=1;
-        super.itemCount+=1;
+        if(bookCount==1)
+        {
+           super.itemCount+=1; 
+        }
+        
     }
      /**
      * Method Name: getGenre
@@ -78,6 +82,9 @@ public class Book extends StoreItem
         if(bookCount>0)
         {
             bookCount-=1;
+        }else if(bookCount==0)
+        {
+            super.remove();
         }
     }
     /**

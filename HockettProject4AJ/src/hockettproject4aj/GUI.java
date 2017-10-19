@@ -227,6 +227,7 @@ public class GUI extends JFrame
      */
         public void actionPerformed(ActionEvent event)
         {
+            txtAItems.setText("");
             if(event.getSource()==btnAdd)
             {
                 //btnAdd here
@@ -267,7 +268,7 @@ public class GUI extends JFrame
             
             StoreItem temp=list.get(found);
             
-            temp.remove();
+            //temp.remove();
             if(temp instanceof Book)
                 {
                    ((Book)temp).remove();

@@ -31,7 +31,10 @@ public class Painting extends StoreItem
         this.height=height;
         this.width=width;
         paintingCount+=1;
-        super.itemCount+=1;
+        if(paintingCount==1)
+        {
+           super.itemCount+=1; 
+        }
     }
      /**
      * Method Name: getMedia
@@ -142,6 +145,9 @@ public class Painting extends StoreItem
         if(paintingCount>0)
         {
             paintingCount-=1;
+        }else if(paintingCount==0)
+        {
+            super.remove();
         }
     }
     /**

@@ -29,7 +29,10 @@ private static int movieCount;
         super(title, author, dateAcquired, askingPrice, purchasePrice);
         this.director=director;
         movieCount+=1;
-        super.itemCount+=1;
+        if(movieCount==1)
+        {
+           super.itemCount+=1; 
+        }
     }
      /**
      * Method Name: getDirector
@@ -78,6 +81,9 @@ private static int movieCount;
         if(movieCount>0)
         {
             movieCount-=1;
+        }else if(movieCount==0)
+        {
+            super.remove();
         }
     }
     /**
