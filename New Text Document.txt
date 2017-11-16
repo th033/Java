@@ -1,0 +1,3 @@
+a dog is an animal
+a cat is also an animal
+tim is a person
